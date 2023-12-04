@@ -1,3 +1,13 @@
+import Link from 'next/link'
+
+import { buttonVariants } from '@/components/ui/button'
+
 export default function Home() {
-  return <h1>This is Home page</h1>
+  return (
+    <section>
+      <Link href="/routing" className={buttonVariants({ variant: 'link' })}>
+        Routing
+      </Link>
+    </section>
+  )
 }
