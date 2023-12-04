@@ -33,6 +33,8 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --header-height: 72px;
   }
 
   .dark {
@@ -73,4 +75,41 @@
   body {
     @apply bg-background text-foreground;
   }
+  code {
+    @apply rounded bg-secondary p-1 text-sm;
+  }
+  a.active {
+    @apply text-blue-600;
+  }
 }
+
+header {
+  @apply bg-background;
+  height: var(--header-height);
+}
+
+main {
+  @apply min-h-screen;
+  padding-top: var(--header-height);
+}
+
+/* Scrollbar CSS starts here */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  @apply w-2;
+}
+
+*::-webkit-scrollbar-track {
+  @apply rounded-md bg-secondary;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply rounded-lg border-2 border-solid border-secondary bg-secondary-foreground;
+}
+/* Scrollbar CSS ends here */

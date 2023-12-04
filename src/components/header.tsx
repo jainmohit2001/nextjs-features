@@ -15,7 +15,7 @@ export function Header() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <header className="sticky top-0 z-10 flex flex-1 border-b-2 px-5 py-2">
+    <header className="fixed top-0 z-10 flex w-full flex-1 border-b-2 px-5 py-2">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>

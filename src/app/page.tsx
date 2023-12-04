@@ -1,13 +1,7 @@
-import Link from 'next/link'
-
-import { buttonVariants } from '@/components/ui/button'
-
 export default function Home() {
   return (
     <section>
-      <Link href="/routing" className={buttonVariants({ variant: 'link' })}>
-        Routing
-      </Link>
+      <p className="text-2xl">Learn the concepts of React.js with examples!</p>
     </section>
   )
 }

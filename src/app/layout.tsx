@@ -5,6 +5,7 @@ import './globals.css'
 
 import { cn } from '@/lib/utils'
 import { Header } from '@/components/header'
+import { SideNav } from '@/components/side-nav'
 import { ThemeProvider } from '@/components/theme-provider'
 
 const fontSans = FontSans({ subsets: ['latin'], variable: '--font-sans' })
@@ -23,10 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(
-          'min-h-screen bg-background font-sans antialiased',
-          fontSans.variable,
-        )}
+        className={cn('bg-background font-sans antialiased', fontSans.variable)}
       >
         <ThemeProvider
           themes={['light', 'dark']}
@@ -36,7 +34,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="p-3 lg:p-4">{children}</main>
+          <main className="flex h-full flex-1">
+            <SideNav />
+            <div className="w-full p-3 lg:p-4">{children}</div>
+          </main>
         </ThemeProvider>
       </body>
     </html>

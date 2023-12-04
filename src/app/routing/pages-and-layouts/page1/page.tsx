@@ -18,6 +18,9 @@ export default function RoutingPage() {
       >
         Go back
       </Button>
+      <p>
+        We are using the <code>useRouter</code> Hook to navigate back.
+      </p>
     </div>
   )
 }
