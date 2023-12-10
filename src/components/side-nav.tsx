@@ -14,7 +14,7 @@ import {
 type NavInfo = {
   label: string
   href: string
-  content: [{ label: string; href: string }]
+  content: { label: string; href: string }[]
 }
 
 const data: NavInfo[] = [
@@ -23,6 +23,8 @@ const data: NavInfo[] = [
     href: '/routing',
     content: [
       { label: 'Pages and Layouts', href: '/routing/pages-and-layouts' },
+      { label: 'Dynamic routes', href: '/routing/dynamic-routes' },
+      { label: 'Loading', href: '/routing/loading' },
     ],
   },
 ]
@@ -75,7 +77,7 @@ function Collapse(
                 variant: 'link',
                 className:
                   'whitespace-nowrap' +
-                  (pathname == subItem.href ? ' active' : ''),
+                  (pathname.startsWith(subItem.href) ? ' active' : ''),
               })}
             >
               {subItem.label}
