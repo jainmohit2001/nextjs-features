@@ -3,6 +3,8 @@ import { Inter as FontSans } from 'next/font/google'
 
 import './globals.css'
 
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
 import { cn } from '@/lib/utils'
 import { Header } from '@/components/header'
 import { SideNav } from '@/components/side-nav'
@@ -26,6 +28,7 @@ export default function RootLayout({
       <body
         className={cn('bg-background font-sans antialiased', fontSans.variable)}
       >
+        <SpeedInsights />
         <ThemeProvider
           themes={['light', 'dark']}
           attribute="class"
