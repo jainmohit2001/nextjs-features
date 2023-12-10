@@ -1,5 +1,7 @@
 import { sleep } from '@/lib/utils'
 
+export const revalidate = 0
+
 async function networkError(): Promise<string> {
   await sleep(1000)
   throw new Error('value of rand is false')

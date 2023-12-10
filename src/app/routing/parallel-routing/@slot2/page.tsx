@@ -1,5 +1,7 @@
 import { sleep } from '@/lib/utils'
 
+export const revalidate = 0
+
 export default async function Slot2Page() {
   await sleep(3000)
 
