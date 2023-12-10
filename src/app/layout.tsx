@@ -3,6 +3,7 @@ import { Inter as FontSans } from 'next/font/google'
 
 import './globals.css'
 
+import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { cn } from '@/lib/utils'
@@ -29,6 +30,7 @@ export default function RootLayout({
         className={cn('bg-background font-sans antialiased', fontSans.variable)}
       >
         <SpeedInsights />
+        <Analytics />
         <ThemeProvider
           themes={['light', 'dark']}
           attribute="class"
