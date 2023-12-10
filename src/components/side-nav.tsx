@@ -25,7 +25,8 @@ const data: NavInfo[] = [
       { label: 'Pages and Layouts', href: '/routing/pages-and-layouts' },
       { label: 'Dynamic routes', href: '/routing/dynamic-routes' },
       { label: 'Loading', href: '/routing/loading' },
-      { label: 'Error Handling', href: '/routing/error-handling' },
+      { label: 'Error handling', href: '/routing/error-handling' },
+      { label: 'Parallel routing', href: '/routing/parallel-routing' },
     ],
   },
 ]
